@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHAMED ASLAM ISMAILI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #FFF3E0;
+        }
+        header {
+            background-color: #0a80ff;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .image-section img {
+            width: 80%;
+            max-width: 600px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #1363f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME to ASLAM's official website</h1>
+    </header>
+    <div id="main-content" class="container">
+        <!-- Le contenu sera ajouté dynamiquement ici -->
+    </div>
+    <footer>
+        <p>&copy; ASLAM - All rights reserved</p>
+    </footer>
+
+    <script>
+        // Crée le contenu de la page dynamiquement
+        const mainContent = document.getElementById("main-content");
+
+        // Section 1: Introduction
+        const introduction = document.createElement("div");
+        introduction.innerHTML = `
+            <h2>About ASLAM</h2>
+            <p>Aslam is a skilled developer with experience in HTML, working on various web development projects and constantly improving their skills.</p>
+        `;
+        mainContent.appendChild(introduction);
+
+        // Section 2: What Aslam Does
+        const whatAslamDoes = document.createElement("div");
+        whatAslamDoes.innerHTML = `
+            <h2>What Does ASLAM Do?</h2>
+            <p>I create a wide variety of websites to help me and my friends in their school life.</p>
+        `;
+        mainContent.appendChild(whatAslamDoes);
+
+        // Button for contact
+        const contactButton = document.createElement("a");
+        contactButton.href = "#contact";
+        contactButton.className = "button";
+        contactButton.innerText = "Contact ASLAM";
+        mainContent.appendChild(contactButton);
+
+        // Section 3: Contact
+        const contactSection = document.createElement("div");
+        contactSection.id = "contact";
+        contactSection.innerHTML = `
+            <h2>Contact ASLAM</h2>
+            <p>Email: <a href="mailto:aslam33aslam22@gmail.com">aslam33aslam22@gmail.com</a></p>
+            <p>Phone Number: 0688146516</p>
+        `;
+        mainContent.appendChild(contactSection);
+
+        // Ajouter des images dynamiquement
+        const imageSection = document.createElement("div");
+        imageSection.className = "image-section";
+        const images = [
+            "https://via.placeholder.com/600x400?text=Project+1",
+            "https://via.placeholder.com/600x400?text=Project+2",
+            "https://via.placeholder.com/600x400?text=Project+3"
+        ];
+
+        images.forEach((src) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "Project Image";
+            imageSection.appendChild(img);
+        });
+
+        mainContent.appendChild(imageSection);
+    </script>
+</body>
+</html>
