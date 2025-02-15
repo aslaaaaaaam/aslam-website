@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Aslam Electronic iPhones</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .phone-slot {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mohammed Aslam Electronic iPhones</h1>
+        <p>Your trusted source for buying and selling iPhones.</p>
+    </header>
+    <main>
+        <div class="container" id="phone-list">
+            <div class="phone-slot">iPhone 12 - $700<button>Buy Now</button></div>
+            <div class="phone-slot">iPhone 13 - $800<button>Buy Now</button></div>
+            <div class="phone-slot">iPhone 14 - $900<button>Buy Now</button></div>
+        </div>
+    </main>
+</body>
+</html>
