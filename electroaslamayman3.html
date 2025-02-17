@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Aslam Electronic iPhones</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #001f3f;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 60%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        section {
+            padding: 3rem;
+            text-align: center;
+        }
+        .product-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            width: 280px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product:hover {
+            transform: scale(1.08);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .whatsapp {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function searchPhones() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let products = document.getElementsByClassName("product");
+            for (let i = 0; i < products.length; i++) {
+                let name = products[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+                products[i].style.display = name.includes(input) ? "block" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mohammed Aslam Electronic iPhones</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="search-bar">
+        <input type="text" id="search" onkeyup="searchPhones()" placeholder="Search for iPhones...">
+    </div>
+    
+    <section id="products">
+        <h2>Shop Our Collection</h2>
+        
+        <h3>iPhone 12 Series</h3>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-black.jpg" alt="iPhone 12">
+                <h3>iPhone 12</h3>
+                <p>$699</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12-pro/iphone-12-pro-graphite.jpg" alt="iPhone 12 Pro">
+                <h3>iPhone 12 Pro</h3>
+                <p>$899</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        
+        <h3>iPhone 13 Series</h3>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-13/iphone-13-blue.jpg" alt="iPhone 13">
+                <h3>iPhone 13</h3>
+                <p>$799</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-13-pro/iphone-13-pro-sierra-blue.jpg" alt="iPhone 13 Pro">
+                <h3>iPhone 13 Pro</h3>
+                <p>$999</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: aslam33aslam22@gmail.com</p>
+        <p>Phone: 0688146526</p>
+        <div class="whatsapp">
+            <p>WhatsApp: <a href="https://wa.me/212688146526" target="_blank">Chat with us</a></p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mohammed Aslam Electronic iPhones. All rights reserved.</p>
+    </footer>
+</body>
+</html>
