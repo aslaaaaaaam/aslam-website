@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>MED ASLAM DESIGNE PRESTIGE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #4fcbe7;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .furniture-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        .furniture-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .furniture-item-content {
+            padding: 15px;
+        }
+
+        .furniture-item h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .furniture-item p {
+            margin-bottom: 0;
+            color: #555555bc;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 400px) {
+            header {
+                flex-direction: column;
+               align-items: flex-start;
+            }
+            header img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.google.com/imgres?q=med%20aslam%20design%20prestige&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D550687980084605&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Fabdellahismaili061966%2F%3Flocale%3Dfr_FR&docid=DM2rII-WEVU4LM&tbnid=lrqHmS3x8aXMdM&vet=12ahUKEwislazGq8aNAxV6WKQEHX5QKXYQM3oECBgQAA..i&w=461&h=461&hcb=2&ved=2ahUKEwislazGq8aNAxV6WKQEHX5QKXYQM3oECBgQAA" alt="Company Logo" />
+    <h1>Furniture World</h1>
+</header>
+
+<div class="content" id="furniture-list">
+    <!-- Furniture items will be loaded here dynamically -->
+</div>
+
+<footer>
+    <p>Follow us on:</p>
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> |
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+</footer>
+
+<script>
+// Fetch furniture data from furniture.json and render it with images and animation delay
+fetch('furniture.json')
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('furniture-list');
+        data.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'furniture-item';
+            // Stagger animation delays for nice effect
+            div.style.animationDelay = (index * 0.15) + 's';
+
+            div.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <div class="furniture-item-content">
+                    <h2>${item.name}</h2>
+                    <p>${item.description}</p>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    })
+    .catch(error => {
+        console.error('Error loading furniture data:', error);
+        const container = document.getElementById('furniture-list');
+        container.innerHTML = "<p>Failed to load furniture items.</p>";
+    });
+</script>
+
+</body>
+</html>
