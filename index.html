@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furniture World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #3797ea;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1e1e2f;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+      border-radius: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h2 {
+      margin: 0 0 10px;
+      color: #1e1e2f;
+    }
+    footer {
+      background: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    .social a {
+      color: #050f6b;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/50" alt="Logo">
+    <h1>Furniture World</h1>
+  </header>
+
+  <main class="products">
+    <a href="sofa .html" class="product">
+      <img src="https://images.unsplash.com/photo-1585559602428-e84c2561f91b?auto=format&fit=crop&w=800&q=60" alt="Sofa">
+      <div class="product-info">
+        <h2>Modern Sofa</h2>
+        <p>Minimalist 3-seater with cozy cushions.</p>
+      </div>
+    </a>
+
+    <a href="dining .html" class="product">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60" alt="Dining Table">
+      <div class="product-info">
+        <h2>Dining Table</h2>
+        <p>Elegant oak dining table, 6 seats.</p>
+      </div>
+    </a>
+
+    <a href="chair.html" class="product">
+      <img src="https://images.unsplash.com/photo-1598300053654-fc7652c1655b?auto=format&fit=crop&w=800&q=60" alt="Chair">
+      <div class="product-info">
+        <h2>Office Chair</h2>
+        <p>Ergonomic chair with lumbar support.</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <p>Follow us on:</p>
+    <div class="social">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>
