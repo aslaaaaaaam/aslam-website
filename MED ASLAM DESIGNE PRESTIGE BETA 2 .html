@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MED ASLAM DESIGN PRESTIGE </title>
+  <style>
+    :root {
+      --primary: #000000;
+      --accent: #141d41;
+      --light: #f9f9f9;
+      --text: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .furniture-item {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .furniture-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .furniture-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .furniture-item-content {
+      padding: 20px;
+    }
+
+    .furniture-item h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: var(--primary);
+    }
+
+    .furniture-item p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 60px;
+    }
+
+    .social-links a {
+      color: var(--accent);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: white;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAvVBMVEX///8XPF4akf8Ajf8Aiv8AKVG2y+oPNlcAj/+7w88AMVeJlKINOFsAh/9JX3eMlKPB2/9Xo/+00//1+f9Jnv/v9f8AIk6+wsqDuf3S5P/c6v8Ag//l7//N4f/H3v/29/jk5unP09iPv/89VXAzl/8AHEuvtr+iqrWhyP+RnKlgcYZ5s//f6fXR4PO40vS5z+lPnvOqyfF3g5QnRWQABkMykvMAFEdrrP9ncX6AiZNXZ35lpe/38+x6q+aiu9/mhlOUAAAExUlEQVRoge2Ze3eiOBiHgSRTGsCRi2gtlYuIeJu2tlO2nd39/h9rcoEEFGuxds+ZPb7/eAzhyS/vLQqKcrE/2cLhfLHI4vAL0PES+Rhj5JtG1P1u1ymt9eoSmSo3E+NhV/YdgNws2225jCs2Mfy9IzuBWmVAu9m/XmN3hQeeZBO7Tc4Iz4GuNQykwZngblM2Mx3uxPVEeF8He2xicPV5uDuyhC8goBlTLQXSu0/C77SKpYP8br3ebDYr4SRr9Cm4TEBoD6rBH8JP0BODneEyAXX9vjYePlTjAFRx7QqXCViTXe1IXCr4COpUoQNbys73N5VK8WM6MK/V/1H4BAjHPgzaJsgsgmztaIo+CHdFSgD4eGBOXyQS5K1sUbnmffhE3vewW+c1BYklXMPiGpfi34XXdrzfoeomq8DiYTGY+HfggYgkSGlvjbZ8PPdsZrzfRlt6nLmFEG+z4y1+wu/Bc1HfFuseGXqmtw08qHPju4mf1Zh+OlY5Xf85od/DrW8egg9E3cCUplj45quIUBwomy6kTWWOzBe2JSneSlhaDTFqh09EZfO+kdFd+rEiACV+pCx8sv3pkIsvFy6PqLD32sYWkQQalR29+SQ++Gnt7TZdkG62JDPMF4O6TLYJiydA3CI7lbLdKjgq+mujtTR0kA+vaOx6EQtUJR56bac36ReVbMiSRFmwgvaNfutZQdLj7hXRfWUsVlWK6aDlp8dANAvu7bjHCgLNHauVTU+6fE635m9L8ZW21S7bAc2gGDNWyng+2j8/hcH7KzZpxsSPK3mA5ZmUbTdlR72yCaHrdp+UlG9XfJrPKkp6vn5EiQ4INHYsZn7VPtG1fpgt4SrGMRdfguQRNWp6K9zORGf+KJwk5ZyzKtfwuN4IV2msfjOM1e5wMvWJiReNGK7cWgIyP4VLKbsbXDWfFw1HgFSpvA1YkvC6OQ1OZvOKEiFU+Ie1ap4lp8FV0+S/zAso4SCd8Lppyu4OV020ZOId1gAV4W3S58xddmc4SUo0F+IV4m0mO1qivYmnwFV1xjolbcQKtNlCGdpzyalwFfMzKvAUVpKh8dI260S4avpzWf5Ru+yT4bSixL/R74fYJ8NVf/iFcHSBX+AnwHv7HeuzcGxc4Bf4BX4crl23Hepnguv3f6pbLvAL/D+D48z+GrhpYowWBZNOH+IAYeRvA/lO4RjjdmGH4AyKkD+dbg0jtrXUY1aMhNkrPuRtXo3t9Mkns8ki5kG4aVImoc7w29JYDOMo4tfc9kccdYui4dAw3nr+DNGdUKvBpz754UKFzrPO70kalmULspUpSYSZgEdxFJ7z1VEYEuKHZw+IBf2mjelg64PYYxaMJ/0kWRUFz0SLGmwaG7NSzS5+Jcnjj806OLb5Qd9JCjtN6fsDmnO6qCG9abVs10lq0jcOgOTVr9Hj/frvHagbTPJRoUGLMsvMZi8oqOKUfE3tprExvh8mQigAhPHz4Z9/v63JRgZjotVLGVTXKNGybm9vddtOktxxgiAYuNR21VAjF8eOkyeJbWvkHqmMcCDUPIWsTQboihCmqU2A48PPnY8E6sbJRx4VCvkaCn0aQuJSjJyb4Hi9fMRcsghxsWUBRfMSZ3we6s4aY0f5Cu7F/qf2G3hkeUcd1ybLAAAAAElFTkSuQmCC" alt="MED ASLAM DESIGN PRESTIGE" />
+    <h1>BIENVENUE AU SITE OFFICIEL DE MED ASLAM DESIGN PRESTIGE </h1>
+  </header>
+
+  <main class="content">
+    <div class="furniture-item" style="animation-delay: 0s;">
+      <img src="https://images.unsplash.com/photo-1585559602428-e84c2561f91b?auto=format&fit=crop&w=800&q=60" alt="Modern Sofa" />
+      <div class="furniture-item-content">
+        <h2>Modern Sofa</h2>
+        <p>Comfortable 3-seater with sleek lines and premium fabric. Perfect for any living room.</p>
+      </div>
+    </div>
+
+    <div class="furniture-item" style="animation-delay: 0.2s;">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60" alt="Wooden Dining Table" />
+      <div class="furniture-item-content">
+        <h2>Wooden Dining Table</h2>
+        <p>Classic solid wood table with a natural finish. Seats up to 6 people.</p>
+      </div>
+    </div>
+
+    <div class="furniture-item" style="animation-delay: 0.4s;">
+      <img src="https://images.unsplash.com/photo-1598300053654-fc7652c1655b?auto=format&fit=crop&w=800&q=60" alt="Office Chair" />
+      <div class="furniture-item-content">
+        <h2>Ergonomic Office Chair</h2>
+        <p>Supportive mesh backrest, adjustable seat height and lumbar support.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Follow us on:</p>
+    <div class="social-links">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
